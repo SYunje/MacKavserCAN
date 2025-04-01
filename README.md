@@ -36,11 +36,8 @@ Mac 용 Kvaser CAN 인터페이스를 위한 Python 클래스 래퍼입니다. �
 3. 설치 확인
    ```bash
    # 빌드 후 생성된 라이브러리 파일을 수동으로 복사해줍니다
-   sudo cp Libraries/macOS/libUVCANKVL.*.dylib /usr/local/lib/
-
-
-   # 복사된 라이브러리 파일에 대해 심볼릭 링크를 생성합니다
-   sudo ln -sf /usr/local/lib/libUVCANKVL.0.3.4.dylib /usr/local/lib/libUVCANKVL.dylib
+   sudo cp Libraries/KvaserCAN/libKvaserCAN.0.3.4.dylib /usr/local/lib/
+   sudo ln -sf /usr/local/lib/libKvaserCAN.0.3.4.dylib /usr/local/lib/libKvaserCAN.dylib
 
    # 설치 확인
    ls -l /usr/local/lib/libUVCANKVL.dylib
