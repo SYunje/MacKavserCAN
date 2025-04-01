@@ -33,12 +33,37 @@ Mac 용 Kvaser CAN 인터페이스를 위한 Python 클래스 래퍼입니다. �
    make all
    sudo make install
    ```
+3. 설치 확인
+   ```bash
+   # 라이브러리 파일 확인
+   ls -l /usr/local/lib/libUVCANKVL.dylib
 
-3. 이 저장소를 클론하거나 소스 파일을 다운로드:
+   # Python 래퍼 파일 확인
+   ls -l ~/KvaserCAN-Library/Examples/Python/CANAPI.py
+   
+   ```
+
+4. 이 저장소를 클론하거나 소스 파일을 다운로드:
    ```bash
    git clone https://github.com/yourusername/PyKvaserCAN.git
    ```
+   
+필요한 파일이 없는 경우
+만약 위 명령어로 파일을 찾을 수 없다면, 다음과 같이 직접 파일을 복사하세요
 
+라이브러리 파일 복사
+   ```bash
+   sudo cp KvaserCAN-Library/Libraries/macOS/libUVCANKVL.*.dylib /usr/local/lib/
+   cd /usr/local/lib
+   # 버전(예: 0.3.4)을 실제 파일 이름에 맞게 변경하세요
+   sudo ln -sf libUVCANKVL.[버전].dylib libUVCANKVL.dylib
+   ```
+
+Python 래퍼 파일 처리:
+   ```bash
+   # 래퍼 파일을 프로젝트 폴더에 직접 복사
+   cp KvaserCAN-Library/Examples/Python/CANAPI.py 여러분의프로젝트폴더/
+   ```
 ## 사용 예시
 
 ### 기본적인 메시지 송신/수신
